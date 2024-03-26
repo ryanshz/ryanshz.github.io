@@ -1,0 +1,42 @@
+---
+import Header from "../components/header.astro";
+import Sidenav from "../components/sidenav.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script is:inline>
+			// ☝️ This script prevents the FART effect.
+			if (localStorage.getItem("theme") === null) {
+				document.documentElement.setAttribute("data-theme", "business");
+			} else
+				document.documentElement.setAttribute(
+					"data-theme",
+					localStorage.getItem("theme"),
+				);
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header />
+		<main class="drawer lg:drawer-open h-fit font-mono bg-base-300">
+			<Sidenav />
+			<slot />
+		</main>
+	</body>
+</html>

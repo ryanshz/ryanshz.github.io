@@ -1,0 +1,205 @@
+---
+import Base from "../layouts/base.astro";
+
+const pageName = "projects";
+---
+
+<Base pageTitle={pageName}>
+    <section class="drawer-content m-8 space-y-8">
+        <div class="card bg-base-100 shadow-xl rounded-none flex-initial">
+            <div class="space-y-3 m-5">
+                <h2 class="font-bold text-xl">projects</h2>
+                <p>projects i've worked or am currently working on</p>
+            </div>
+        </div>
+        <div
+            class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <section class="flex-1 m-5">
+                <div class="w-fit bg-cover relative opacity-90">
+                    <figure class="slideshowImage hidden">
+                        <div
+                            class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
+                        >
+                            1 / 2
+                        </div>
+                        <img src="/fedoradesk.png" class="" />
+                    </figure>
+                    <figure class="slideshowImage hidden">
+                        <div
+                            class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
+                        >
+                            2 / 2
+                        </div>
+                        <img src="/fedoradesk-laptop.png" class="" />
+                    </figure>
+                    <button
+                        class="absolute top-1/2 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
+                        onclick="plusSlides(-1)">&#10094;</button
+                    >
+                    <button
+                        class="absolute top-1/2 right-0 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
+                        onclick="plusSlides(1)">&#10095;</button
+                    >
+                </div>
+                <div class="text-center pt-2">
+                    <button
+                        class="h-4 w-4 mx-1 bg-neutral-400 rounded-full inline-block hover:animate-pulse slideshowDot"
+                        onclick="currentSlide(1)"></button>
+                    <button
+                        class="h-4 w-4 mx-1 bg-neutral-400 rounded-full inline-block hover:animate-pulse slideshowDot"
+                        onclick="currentSlide(2)"></button>
+                </div>
+            </section>
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">linux workstations</h2>
+                <p>
+                    complete customization of Fedora Linux, from a barebones
+                    install to a very efficient workstation for my workflow
+                </p>
+                <ul class="space-y-3 list-disc ml-5">
+                    <li>first image: home workstation, which uses bspwm</li>
+                    <li>second image: laptop, which uses hyprland</li>
+                </ul>
+                <p>
+                    <strong class="text-success"
+                        >tools used:</strong
+                    > Shell, Python, CSS
+                </p>
+                <p>
+                    <strong class="animate-pulse text-error">compilers:</strong>
+                    xorg, wayland
+                </p>
+                <div class="card-actions underline text-primary">
+                    <a
+                        href="https://github.com/ryanshz/dotfiles"
+                        target="_blank"
+                        rel="noopener noreferrer">more info</a
+                    >
+                </div>
+            </div>
+        </div>
+        <div
+            class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">severus slices ecommerce app</h2>
+                <p>
+                    full stack web application that was an implementation of an
+                    ecommerce site
+                </p>
+                <p>
+                    uses EJS to auto-generate product pages, complete CRUD
+                    functionality that uploads to a MongoDB database through
+                    Mongoose ODM
+                </p>
+                <p>
+                    the pizza part was initially a joke but it kind of became
+                    part of the project
+                </p>
+                <p>
+                    <strong class="text-success"
+                        >tools used:</strong
+                    > Express, Node.js, MongoDB, React, Tailwind CSS
+                </p>
+            </div>
+            <figure class="p-7 flex-none">
+                <img
+                    class="opacity-90 shadow-xl max-h-96"
+                    src="/severusslices.png"
+                    alt="image of severus slices site"
+                />
+            </figure>
+        </div>
+        <div
+            class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <figure class="p-7 flex-none">
+                <img
+                    class="opacity-90 shadow-xl max-h-96"
+                    src="/quickqollab.png"
+                    alt="quickqollab web application"
+                />
+            </figure>
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">quickqollab web app</h2>
+                <p>
+                    digital whiteboard web app with functional chatrooms and
+                    interactive whiteboards
+                </p>
+                <p>
+                    <strong class="text-success"
+                        >tools used:</strong
+                    > React, Tailwind CSS, Flask, Node.js
+                </p>
+            </div>
+        </div>
+        <div
+            class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">portfolio remake (this site!)</h2>
+                <p>
+                    full stack web application that acts as my current portfolio
+                </p>
+                <p>culmination of everything i've learned for around 3 years</p>
+                <p>
+                    <strong class="text-success"
+                        >tools used:</strong
+                    > Astro, Tailwind CSS, Express, Node.js
+                </p>
+                <div class="card-actions underline text-primary">
+                    <a
+                        href="https://github.com/ryanshz/ryanshz.github.io"
+                        target="_blank"
+                        rel="noopener noreferrer">more info</a
+                    >
+                </div>
+            </div>
+            <figure class="p-7 flex-none">
+                <img
+                    class="opacity-90 shadow-xl max-h-96"
+                    src="/portfolio.png"
+                    alt="image of my portfolio site"
+                />
+            </figure>
+        </div>
+    </section>
+    <script is:inline>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideshowImage");
+            let dots = document.getElementsByClassName("slideshowDot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(
+                    " bg-neutral-600",
+                    "",
+                );
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " bg-neutral-600";
+        }
+    </script>
+</Base>

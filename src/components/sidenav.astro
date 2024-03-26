@@ -1,0 +1,40 @@
+---
+import Social from "./social.astro";
+---
+
+<aside class="drawer drawer-open hidden md:inline w-56">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+    <section class="drawer-side w-56">
+        <label
+            for="my-drawer-2"
+            aria-label="close sidebar"
+            class="drawer-overlay"></label>
+        <ul class="menu bg-base-200 w-56 min-h-full">
+            <li>
+                <h2 class="menu-title">navigation</h2>
+                <ul>
+                    <li><a aria-label="home" href="/">home</a></li>
+                    <li><a aria-label="about" href="/about/">about me</a></li>
+                    <li>
+                        <a aria-label="websites" href="/websites/">websites</a>
+                    </li>
+                    <li>
+                        <a aria-label="projects" href="/projects/">projects</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2 class="menu-title">social</h2>
+                <ul>
+                    <li><Social platform="github" username="ryanshz" icon="fa fa-github" /></li>
+                    <li>
+                        <Social platform="linkedin" username="in/ryanshz" icon="fa fa-linkedin-square pb-1"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2 class="menu-title">&copy;ryanshz</h2>
+            </li>
+        </ul>
+    </section>
+</aside>

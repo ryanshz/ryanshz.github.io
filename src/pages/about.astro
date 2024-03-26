@@ -1,0 +1,80 @@
+---
+import Base from "../layouts/base.astro";
+
+const pageName = "about";
+---
+
+<Base pageTitle={pageName}>
+    <section class="m-8 drawer-content flex flex-col gap-8">
+        <section class="card bg-black shadow-xl rounded-xl flex-1 opacity-90">
+            <div class="m-5">
+                <span class="text-red-600 pr-1">ryan@ryanshz~$</span>
+                <span id="textContent" class="bg-black text-lime-600"></span>
+            </div>
+        </section>
+        <section class="start flex-none">
+            <button class="btn" id="textVersionButton" onclick="showTextVersion();">text version</button>
+            <div id="textVersion" class="hidden">
+                <div class="my-8 gap-10 flex flex-col xl:flex-row">
+                    <div class="space-y-3 p-5 flex-1 bg-base-100"> 
+                        <h2 class="card-title">qualifications</h2>
+                        <p>unc charlotte class of 2024</p>
+                        <p>bs in <strong>computer science</strong>, concentration in <strong>software engineering</strong></p>
+                        <p>minor in <strong>mathematics</strong></p>
+                    </div>
+                    <div class="space-y-3 p-5 flex-1 bg-base-100">
+                        <h2 class="card-title">skills</h2>
+                        <p>full-stack software engineering</p>
+                        <p>web development</p>
+                        <p>linux administration</p>
+                        <p>ui and ux design</p>
+                        <p>project management</p>
+                    </div>
+                    <div class="space-y-3 p-5 flex-1 bg-base-100">
+                        <h2 class="card-title">hobbies</h2>
+                        <p>lifting: powerlifted for a few years, transitioning to bodybuilding at the moment</p>
+                        <p>writing: read a lot of fantasy growing up, ended with me writing my own whenever</p>
+                        <p>coding: messing with linux is cool, also like customizing ui for it, would like to develop my own ui app at some point</p>
+                        <p>gaming: mmo and arpg addict, dabble in single player games as well</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</Base>
+<script>
+    import TypeIt from "typeit";
+    new TypeIt("#textContent", {
+        speed: 30,
+        lifeLike: true,
+    })
+    .pause(2000)
+    .type("p-abt start")
+    .pause(1000)
+    .type("<br><br>ok! starting now!<br><img src=\"/dot.png\" /><br><img src=\"/about.png\" /><br>v1.0.1 <em>ryanshz//ryanshultz</em><br>for bugs, create an issue on <em>github</em><br><img src=\"/dot.png\" />")
+    .pause(1000)
+    .type("QUALIFICATIONS<br>unc charlotte class of 2024<br>bs in computer science, concentration in software engineering<br>minor in mathematics<br><img src=\"/dot.png\" />")
+    .pause(1000)
+    .type("SKILLS<br>full-stack software engineering<br>web development<br>linux administration<br>ui and ux design<br>project management<br><img src=\"/dot.png\" />")
+    .pause(1000)
+    .type("HOBBIES<br>lifting: powerlifted for a few years, transitioning to bodybuilding at the moment<br>writing: read a lot of fantasy growing up, ended with me writing my own whenever<br>coding: messing with linux is cool, also like customizing ui for it, would like to develop my own ui app at some point<br>gaming: mmo and arpg addict, dabble in single player games as well<br>")
+    .pause(1000)
+    .type("<br>that's all for now!<br><span class=\"text-red-600 pr-1\">ryan@ryanshz~$</span>")
+    .go();
+</script>
+<script is:inline>
+    function showTextVersion() {
+        const textVersion = document.getElementById("textVersion");
+        const textVersionButton = document.getElementById("textVersionButton");
+        console.log(textVersion);
+        if (textVersion.getAttribute("class") === "hidden") {
+            textVersion.setAttribute("class", "block");
+            textVersionButton.innerHTML = "close text version";
+        } else {
+            textVersion.setAttribute("class", "hidden");
+            textVersionButton.innerHTML = "text version";
+        }
+    }
+</script>
+    
+

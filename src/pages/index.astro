@@ -1,0 +1,153 @@
+---
+import Base from "../layouts/base.astro";
+
+const pageTitle = "ryanshz";
+---
+
+<Base pageTitle={pageTitle}>
+	<section class="m-8 drawer-content flex flex-col gap-8">
+		<div class="flex gap-8 flex-col xl:flex-row">
+			<section class="card bg-base-100 shadow-xl rounded-none flex-initial">
+				<figure class="p-7">
+					<img
+						class="rounded-full opacity-90 shadow-xl"
+						src="/guts.png"
+						width="400"
+						alt="picture of me"
+					/>
+				</figure>
+				<div class="text-center space-y-3 m-5 pb-5">
+					<h2 class="font-bold text-xl text-center">
+						ryan shultz // ryanshz
+					</h2>
+					<p>computer science major</p>
+					<p>
+						<strong class="animate-pulse text-error">status:</strong
+						> project work
+					</p>
+				</div>
+			</section>
+			<section class="flex-1">
+				<div class="w-fit bg-cover relative opacity-90">
+					<figure class="slideshowImage hidden">
+						<div
+							class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
+						>
+							1 / 3
+						</div>
+						<img src="/bb-site.png" class="" />
+					</figure>
+					<figure class="slideshowImage hidden">
+						<div
+							class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
+						>
+							2 / 3
+						</div>
+						<img src="/fedoradesk-laptop.png" class="" />
+					</figure>
+					<figure class="slideshowImage hidden">
+						<div
+							class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
+						>
+							3 / 3
+						</div>
+						<img src="/saber.png" class="" />
+					</figure>
+					<button
+						class="absolute top-1/2 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
+						onclick="plusSlides(-1)">&#10094;</button
+					>
+					<button
+						class="absolute top-1/2 right-0 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
+						onclick="plusSlides(1)">&#10095;</button
+					>
+				</div>
+				<div class="text-center pt-2">
+					<button
+						class="h-4 w-4 mx-1 bg-neutral-400 rounded-full inline-block hover:animate-pulse slideshowDot"
+						onclick="currentSlide(1)"></button>
+					<button
+						class="h-4 w-4 mx-1 bg-neutral-400 rounded-full inline-block hover:animate-pulse slideshowDot"
+						onclick="currentSlide(2)"></button>
+					<button
+						class="h-4 w-4 mx-1 bg-neutral-400 rounded-full inline-block hover:animate-pulse slideshowDot"
+						onclick="currentSlide(3)"></button>
+				</div>
+			</section>
+		</div>
+		<section class="bg-base-100 shadow-xl rounded-none">
+			<h2 class="card-title px-6 py-5">where to find me</h2>
+			<div class="flex 2xl:flex-row flex-col">
+				<div class="px-5 pb-8 flex-1">
+					<div
+						class="mockup-browser border border-base-300 hover:shadow-lg transition duration-300 ease-in-out"
+					>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://github.com/ryanshz"
+							class="mockup-browser-toolbar"
+						>
+							<div class="input border border-base-300">
+								https://github.com/ryanshz
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="px-5 pb-8 flex-1">
+					<div
+						class="mockup-browser border border-base-300 hover:shadow-lg transition duration-300 ease-in-out"
+					>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://linkedin.com/in/ryanshz"
+							class="mockup-browser-toolbar"
+						>
+							<div class="input border border-base-300">
+								https://linkedin.com/in/ryanshz
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>	
+</Base>
+<script is:inline>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+		showSlides((slideIndex += n));
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+		showSlides((slideIndex = n));
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("slideshowImage");
+		let dots = document.getElementsByClassName("slideshowDot");
+		if (n > slides.length) {
+			slideIndex = 1;
+		}
+		if (n < 1) {
+			slideIndex = slides.length;
+		}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(
+				" bg-neutral-600",
+				"",
+			);
+		}
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " bg-neutral-600";
+	}
+</script>

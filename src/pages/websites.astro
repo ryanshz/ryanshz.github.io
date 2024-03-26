@@ -1,0 +1,182 @@
+---
+import type { Code } from "astro:components";
+import Base from "../layouts/base.astro";
+
+const pageName = "websites";
+---
+
+<Base pageTitle={pageName}>
+    <section class="drawer-content m-8 space-y-8">
+        <div class="card bg-base-100 shadow-xl rounded-none flex-initial">
+            <div class="space-y-3 m-5">
+                <h2 class="font-bold text-xl">websites</h2>
+                <p>websites i've designed</p>
+            </div>
+        </div>
+        <div
+            class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <figure class="flex-none m-5">
+                <img
+                    class="opacity-90 shadow-xl max-h-64"
+                    src="/bb-site.png"
+                    alt="bodybuilding hobby site"
+                />
+            </figure>
+            <div class="space-y-3 m-5">
+                <h2 class="font-bold text-xl underline">
+                    <a
+                        href="https://ryanshz.github.io/itis3135/hobby/"
+                        target="_blank"
+                        rel="noopener noreferrer">bodybuilding</a>
+                </h2>
+                <p>
+                    site i made for a midterm project based around bodybuilding
+                </p>
+                <p>
+                    the purpose of this site was to use JavaScript to change the
+                    page content without having more than one HTML file
+                </p>
+                <h3 class="font-bold text-secondary">things i would change:</h3>
+                <ul class="space-y-3 list-disc ml-5">
+                    <li>
+                        <strong>page layout:</strong> the design of the physiques
+                        and index pages was not my best work. in hindsight, i would
+                        have designed the index page differently and completely changed
+                        the physiques page.
+                    </li>
+                </ul>
+                <p>
+                    <strong class="text-success"
+                        >languages:</strong
+                    > HTML, CSS, JavaScript
+                </p>
+            </div>
+        </div>
+        <div
+            class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <div class="space-y-3 m-5">
+                <h2 class="font-bold text-xl underline">
+                    <a
+                        href="http://ryanshz.github.io"
+                        target="_blank"
+                        rel="noopener noreferrer">original portfolio</a>
+                </h2>
+                <p>
+                    previous portfolio site that i used to display info about me
+                    and current projects
+                </p>
+                <h3 class="font-bold text-secondary">things i would change:</h3>
+                <ul class="space-y-3 list-disc ml-5">
+                    <li>
+                        <strong>html code:</strong> i didn't know a lot about semantic
+                        elements when i first made this site, so a lot of div and
+                        span elements are abused.
+                    </li>
+                    <li>
+                        <strong>page layout:</strong> the project page for this site
+                        was designed horribly, which led to the total redesign of
+                        this site for something that i appreciated more.
+                    </li>
+                </ul>
+                <p>
+                    <strong class="text-success"
+                        >languages:</strong
+                    > HTML, CSS, JavaScript
+                </p>
+            </div>
+            <figure class="flex-none m-5">
+                <img
+                    class="opacity-90 shadow-xl max-h-64"
+                    src="/ryanshz-site.png"
+                    alt="ryanshz old portfolio site"
+                />
+            </figure>
+        </div>
+        <div
+            class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <figure class="flex-none m-5">
+                <img
+                    class="opacity-90 shadow-xl max-h-64"
+                    src="/shultzcorp-site.png"
+                    alt="sister's art portfolio site"
+                />
+            </figure>
+            <div class="space-y-3 m-5">
+                <h2 class="font-bold text-xl underline">
+                    <a
+                        href="https://ryanshz.github.io/itis3135/shultzcorp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">shultzcorp</a>
+                </h2>
+                <p>the second site i made after my portfolio site</p>
+                <p>
+                    the goal of this site was initially to learn bootstrap, but
+                    quickly exceeded my knowledge and forced me to rewrite it in
+                    HTML and CSS
+                </p>
+                <h3 class="font-bold text-secondary">things i would change:</h3>
+                <ul class="space-y-3 list-disc ml-5">
+                    <li>
+                        <strong>foundations:</strong> KNOW how something works intimately
+                        before you use a more advanced tool to do it for you. i didn't
+                        know how to use bootstrap, and it caused issues later.
+                    </li>
+                </ul>
+                <p></p>
+                <p>
+                    <strong class="text-success">tools:</strong> HTML,
+                    CSS, Bootstrap?
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial"
+        >
+            <div class="space-y-3 m-5">
+                <h2 class="font-bold text-xl underline">
+                    <a
+                        href="https://ryanshz.github.io/itis3135/kaykreations/"
+                        target="_blank"
+                        rel="noopener noreferrer">kaykreations</a>
+                </h2>
+                <p>
+                    a portfolio site i made for my sister as a project for web
+                    development
+                </p>
+                <p>
+                    the goal of this site was to be as creative as possible with
+                    layouts and styling
+                </p>
+                <h3 class="font-bold text-secondary">things i would change:</h3>
+                <ul class="space-y-3 list-disc ml-5">
+                    <li>
+                        <strong>contact page:</strong> how does one design a contact
+                        page? this project is an indication that i had no idea how
+                        to, and it shows on the page.
+                    </li>
+                    <li>
+                        something specific is the vertical spacing of the top
+                        navbar. it's not even!
+                    </li>
+                </ul>
+                <p></p>
+                <p>
+                    <strong class="text-success"
+                        >languages:</strong
+                    > HTML, CSS, JavaScript
+                </p>
+            </div>
+            <figure class="flex-none m-5">
+                <img
+                    class="opacity-90 shadow-xl max-h-64"
+                    src="/kk-site.png"
+                    alt="sister's art portfolio site"
+                />
+            </figure>
+        </div>
+    </section>
+</Base>
