@@ -1,8 +1,12 @@
 # ryanshz.github.io redesign
 
-## Project Structure
+## about
 
-Inside this site, you'll see the following folders and files:
+i used astro to rebuild the majority of the site, replacing the old version i made for a class
+
+old version is hosted [here](https://github.com/ryanshz/old-portfolio)
+
+## Project Structure
 
 ```text
 /
@@ -15,7 +19,7 @@ Inside this site, you'll see the following folders and files:
 
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+cd into root before running these
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
