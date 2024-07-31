@@ -6,7 +6,7 @@ i used astro to rebuild the majority of the site, replacing the old version i ma
 
 old version is hosted [here](https://github.com/ryanshz/old-portfolio)
 
-## Project Structure
+## project structure
 
 ```text
 /
@@ -17,7 +17,7 @@ old version is hosted [here](https://github.com/ryanshz/old-portfolio)
 └── package.json
 ```
 
-## Commands
+## commands
 
 cd into root before running these
 
