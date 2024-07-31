@@ -9,7 +9,6 @@ const { pageTitle } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<script is:inline>
-			// ☝️ This script prevents the FART effect.
 			if (localStorage.getItem("theme") === null) {
 				document.documentElement.setAttribute("data-theme", "business");
 			} else

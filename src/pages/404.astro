@@ -2,17 +2,17 @@
 import Header from "../components/header.astro";
 import { Image } from "astro:assets";
 import error from "../images/frieren-error.png";
+import Social from "../components/social.astro"
 
 const pageTitle = "ryanshz | ERROR";
 ---
 
 <html>
     <head>
-        <meta charset="utf-8" />
+		<meta charset="utf-8" />
 		<script is:inline>
-			// ☝️ This script prevents the FART effect.
 			if (localStorage.getItem("theme") === null) {
-				document.documentElement.setAttribute("data-theme", "lofi");
+				document.documentElement.setAttribute("data-theme", "business");
 			} else
 				document.documentElement.setAttribute(
 					"data-theme",
@@ -27,64 +27,103 @@ const pageTitle = "ryanshz | ERROR";
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-    </head>
+	</head>
     <body class="font-mono">
-        <nav class="navbar bg-base-100 shadow">
-            <section class="flex-1 pt-1">
-                <a href="/" class="pl-4 py-1 text-2xl font-bold">
-                    <img
-                        id="logo-image"
-                        class="inline pb-1 pr-2"
-                        src="/logo/logo-black.png"
-                        alt="ryanshz logo"
-                        width="75"
-                    />ryanshz
-                </a>
-            </section>
-            <section class="flex-none gap-5 px-5">
-                <label class="cursor-pointer grid place-items-center">
-                    <input
-                        id="theme-toggler"
-                        type="checkbox"
-                        value="business"
-                        class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
-                    />
-                    <svg
-                        class="col-start-1 row-start-1 stroke-base-100 fill-base-100"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><circle cx="12" cy="12" r="5"></circle><path
-                            d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
-                        ></path></svg
+        <header class="navbar bg-base-100 shadow font-mono">
+            <section>
+                <nav class="drawer z-40">
+                    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+                    <section
+                        class="drawer-content flex flex-col items-start justify-center"
                     >
-                    <svg
-                        class="col-start-2 row-start-1 stroke-base-100 fill-base-100"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                        ></path></svg
-                    >
-                </label>
+                        <label
+                            for="my-drawer-2"
+                            class="btn btn-ghost drawer-button md:hidden"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                class="inline-block w-5 h-5 stroke-current"
+                                ><path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </label>
+                    </section>
+                    <section class="drawer-side">
+                        <label
+                            for="my-drawer-2"
+                            aria-label="close sidebar"
+                            class="drawer-overlay"></label>
+                        <ul class="menu bg-base-200 w-56 min-h-full rounded-box">
+                            <li>
+                                <h2 class="menu-title">navigation</h2>
+                                <ul>
+                                    <li>
+                                        <a aria-label="home" href="/">home</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="about" href="/about/">about me</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a aria-label="websites" href="/websites/"
+                                            >websites</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a aria-label="projects" href="/projects/"
+                                            >projects</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2 class="menu-title">social</h2>
+                                <ul>
+                                    <ul>
+                                        <li>
+                                            <Social
+                                                platform="github"
+                                                username="ryanshz"
+                                                icon="fa fa-github"
+                                            />
+                                        </li>
+                                        <li>
+                                            <Social
+                                                platform="linkedin"
+                                                username="in/ryanshz"
+                                                icon="fa fa-linkedin-square pb-1"
+                                            />
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2 class="menu-title">&copy;ryanshz</h2>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
             </section>
-        </nav>
+            <a href="/" class="pl-4 py-1 text-2xl font-bold">
+                <img
+                    id="logo-image"
+                    class="inline pb-1 pr-2"
+                    src="/logo/logo.png"
+                    alt="ryanshz logo"
+                    width="75"
+                />ryanshz
+            </a>
+        </header>
         <section class="flex justify-center">
             <div class="flex flex-col items-center mt-8">
                 <Image
@@ -95,7 +134,7 @@ const pageTitle = "ryanshz | ERROR";
                 />
                 <h2 class="card-title ">congrats! you broke it!</h2>
                 <div class="card-actions mt-5">
-                    <a href="/" class="btn btn-primary">back to home</a>
+                    <a href="/" class="btn btn-secondary">back to home</a>
                 </div>
             </div>
         </section>
