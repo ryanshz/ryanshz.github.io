@@ -1,14 +1,8 @@
----
-import Base from "../layouts/base.astro";
+<!DOCTYPE html>
 
-const pageName = "datamining";
----
-
-<Base pageTitle={pageName}>
-    <section class="drawer-content m-8 space-y-8">
-        <div class="card bg-base-100 shadow-xl rounded-none flex-initial">
-            <div class="space-y-3 m-5">
-                <!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>project1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
@@ -9094,45 +9088,3 @@ Name: count, Length: 84, dtype: int64</pre>
 </main>
 </body>
 </html>
-
-            </div>
-        </div>
-    </section>
-    <script is:inline>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides((slideIndex += n));
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides((slideIndex = n));
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slideshowImage");
-            let dots = document.getElementsByClassName("slideshowDot");
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(
-                    " bg-neutral-600",
-                    "",
-                );
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " bg-neutral-600";
-        }
-    </script>
-</Base>
