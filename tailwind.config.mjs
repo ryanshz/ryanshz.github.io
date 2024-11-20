@@ -1,17 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {},
+		fontFamily: {
+			'sans': ['Inter', 'sans-serif'],
+			'mono': ['JetBrains Mono', 'monospace']
+		},
 	},
-	fontFamily: {
-		'sans': ['Inter', 'sans-serif'],
-		'mono': ['JetBrains Mono', 'monospace']
-	},
-	daisyui:{
+	daisyui: {
 		themes: ['business']
 	},
 	plugins: [
-		require('@tailwindcss/typography'), require('daisyui')
+		typography,
+		daisyui
 	],
-}
+};
