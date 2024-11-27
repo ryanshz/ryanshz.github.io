@@ -6,13 +6,13 @@ const pageName = "projects";
 
 <Base pageTitle={pageName}>
     <section class="drawer-content m-8 space-y-8">
-        <div class="card bg-base-100 shadow-xl rounded-none flex-initial">
+        <article class="card bg-base-100 shadow-xl rounded-none flex-initial">
             <div class="space-y-3 m-5">
                 <h2 class="font-bold text-xl">projects</h2>
                 <p>projects i've worked or am currently working on</p>
             </div>
-        </div>
-        <div class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+        </article>
+        <article class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <section class="flex-1 m-5">
                 <div class="w-fit bg-cover relative opacity-90">
                     <figure class="slideshowImage hidden">
@@ -47,8 +47,26 @@ const pageName = "projects";
                     <a href="https://github.com/stars/ryanshz/lists/linuxdev" target="_blank" rel="noopener noreferrer">current linux projects</a>
                 </div>
             </div>
-        </div>
-        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+        </article>
+        <article class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+            <figure class="p-7 flex-none">
+                <img
+                    class="opacity-90 shadow-xl max-h-96"
+                    src="/clustering_graph.webp"
+                    alt="heatmap of global terrorism data"
+                />
+            </figure>
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">data mining</h2>
+                <p>projects meant to develop my data science skillset, involving data gathering, cleaning, and visualization</p>
+                <p>includes multiple projects on a variety of datasets, as well as a final group project</p>
+                <p><strong class="text-success">tools used:</strong> Jupyter Notebook, Pandas, NumPy, Scikit-Learn, Seaborn, Matplotlib, SciPy</p>
+                <div class="card-actions underline text-primary">
+                    <a href="https://github.com/stars/ryanshz/lists/datamining" target="_blank" rel="noopener noreferrer">datamining projects</a>
+                </div>
+            </div>
+        </article>
+        <article class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-none">
                 <img
                     class="opacity-90 shadow-xl max-h-96"
@@ -67,26 +85,8 @@ const pageName = "projects";
                     <a href="https://github.com/stars/ryanshz/lists/applications" target="_blank" rel="noopener noreferrer">current apps</a>
                 </div>
             </div>
-        </div>
-        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
-            <figure class="p-7 flex-none">
-                <img
-                    class="opacity-90 shadow-xl max-h-96"
-                    src="/clustering_graph.webp"
-                    alt="heatmap of global terrorism data"
-                />
-            </figure>
-            <div class="space-y-3 mx-5 my-10 flex-1">
-                <h2 class="font-bold text-xl">data mining</h2>
-                <p>projects meant to develop my data science skillset, involving data gathering, cleaning, and visualization</p>
-                <p>includes multiple projects on a variety of datasets, as well as a final group project</p>
-                <p><strong class="text-success">tools used:</strong> Jupyter Notebook, Pandas, NumPy, Scikit-Learn, Seaborn, Matplotlib, SciPy</p>
-                <div class="card-actions underline text-primary">
-                    <a href="https://github.com/stars/ryanshz/lists/datamining" target="_blank" rel="noopener noreferrer">datamining projects</a>
-                </div>
-            </div>
-        </div>
-        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+        </article>
+        <article class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-none">
                 <img
                     class="opacity-90 shadow-xl max-h-96"
@@ -102,14 +102,14 @@ const pageName = "projects";
                     <a href="https://ryanshz.itch.io/" target="_blank" rel="noopener noreferrer">my itch.io page</a>
                 </div>
             </div>
-        </div>
-        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+        </article>
+        <article class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <div class="space-y-3 mx-5 my-10 flex-1">
                 <h2 class="font-bold text-xl">android app development</h2>
                 <p>coming soon...</p>
                 <p><strong class="text-success">tools used:</strong> Android Studio, Java</p>
             </div>
-        </div>
+        </article>
     </section>
     <script is:inline>
         let slideIndex = 1;
