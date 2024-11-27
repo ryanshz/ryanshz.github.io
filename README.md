@@ -4,6 +4,10 @@
 
 i used astro to rebuild the majority of the site, replacing the old version i made for a class
 
+self-publishes using github actions
+
+tested with [PageSpeed Insights](https://pagespeed.web.dev/) and [webpagetest.org](webpagetest.org)
+
 old version is hosted [here](https://github.com/ryanshz/old-portfolio)
 
 ## project structure
