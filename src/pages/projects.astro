@@ -12,35 +12,23 @@ const pageName = "projects";
                 <p>projects i've worked or am currently working on</p>
             </div>
         </div>
-        <div
-            class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial"
-        >
+        <div class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <section class="flex-1 m-5">
                 <div class="w-fit bg-cover relative opacity-90">
                     <figure class="slideshowImage hidden">
-                        <div
-                            class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
-                        >
-                            1 / 2
-                        </div>
-                        <img src="/fedoradesk.png" class="" />
+                        <div class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans">1 / 2</div>
+                        <img src="/fedoradesk.webp" class="" />
                     </figure>
                     <figure class="slideshowImage hidden">
-                        <div
-                            class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans"
-                        >
-                            2 / 2
-                        </div>
-                        <img src="/fedoradesk-laptop.png" class="" />
+                        <div class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans">2 / 2</div>
+                        <img src="/fedoradesk-laptop.webp" class="" />
                     </figure>
                     <button
                         class="absolute top-1/2 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
-                        onclick="plusSlides(-1)">&#10094;</button
-                    >
+                        onclick="plusSlides(-1)">&#10094;</button>
                     <button
                         class="absolute top-1/2 right-0 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
-                        onclick="plusSlides(1)">&#10095;</button
-                    >
+                        onclick="plusSlides(1)">&#10095;</button>
                 </div>
                 <div class="text-center pt-2">
                     <button
@@ -52,117 +40,75 @@ const pageName = "projects";
                 </div>
             </section>
             <div class="space-y-3 mx-5 my-10 flex-1">
-                <h2 class="font-bold text-xl">linux workstations</h2>
-                <p>
-                    complete customization of Fedora Linux, from a barebones
-                    install to a very efficient workstation for my workflow
-                </p>
-                <ul class="space-y-3 list-disc ml-5">
-                    <li>first image: newest home workstation, which uses hyprland</li>
-                    <li>second image: laptop, which uses the same window manager</li>
-                </ul>
-                <p>
-                    <strong class="text-success"
-                        >tools used:</strong
-                    > Shell, Python, CSS
-                </p>
-                <p>
-                    <strong class="animate-pulse text-error">compilers:</strong>
-                    wayland
-                </p>
+                <h2 class="font-bold text-xl">linux projects</h2>
+                <p>working to learn linux using Fedora, as well as learning more about operating systems in general</p>
+                <p><strong class="text-success">tools used:</strong> Shell, Python, CSS, C, Assembly</p>
                 <div class="card-actions underline text-primary">
-                    <a
-                        href="https://github.com/ryanshz/dotfiles"
-                        target="_blank"
-                        rel="noopener noreferrer">more info</a
-                    >
+                    <a href="https://github.com/stars/ryanshz/lists/linuxdev" target="_blank" rel="noopener noreferrer">current linux projects</a>
                 </div>
             </div>
         </div>
-        <div
-            class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial"
-        >
-            <div class="space-y-3 mx-5 my-10 flex-1">
-                <h2 class="font-bold text-xl">severus slices ecommerce app</h2>
-                <p>
-                    full stack web application that was an implementation of an
-                    ecommerce site
-                </p>
-                <p>
-                    uses EJS to auto-generate product pages, complete CRUD
-                    functionality that uploads to a MongoDB database through
-                    Mongoose ODM
-                </p>
-                <p>
-                    the pizza part was initially a joke but it became
-                    part of the project
-                </p>
-                <p>
-                    <strong class="text-success"
-                        >tools used:</strong
-                    > Express, Node.js, MongoDB, Tailwind CSS
-                </p>
-            </div>
+        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-none">
                 <img
                     class="opacity-90 shadow-xl max-h-96"
-                    src="/severusslices.png"
-                    alt="image of severus slices site"
-                />
-            </figure>
-        </div>
-        <div
-            class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial"
-        >
-            <figure class="p-7 flex-none">
-                <img
-                    class="opacity-90 shadow-xl max-h-96"
-                    src="/quickqollab.png"
-                    alt="quickqollab web application"
+                    src="/severusslices.webp"
+                    alt="severusslices landing page"
                 />
             </figure>
             <div class="space-y-3 mx-5 my-10 flex-1">
-                <h2 class="font-bold text-xl">quickqollab web app</h2>
-                <p>
-                    features a real-time chatroom and a collaborative whiteboard
-                    that can be used simultaneously by multiple users
-                <p>
-                <p> also features profile creation and customization </p>
-                    <strong class="text-success"
-                        >tools used:</strong
-                    > React, Tailwind CSS, Flask, Node.js, PostgreSQL
-                </p>
-            </div>
-        </div>
-        <div
-            class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial"
-        >
-            <div class="space-y-3 mx-5 my-10 flex-1">
-                <h2 class="font-bold text-xl">portfolio remake (this site!)</h2>
-                <p>
-                    front end web application that acts as my current portfolio
-                </p>
-                <p>culmination of all my web dev experience that i've accumulated for around 2 years</p>
-                <p>
-                    <strong class="text-success"
-                        >tools used:</strong
-                    > Astro, Tailwind CSS
-                </p>
+                <h2 class="font-bold text-xl">web applications</h2>
+                <p>implemented a few web applications, from ecommerce sites to utility tools, helped work on my teambuilding skills</p>
+                <p>one site uses EJS to auto-generate product pages, complete CRUD functionality that uploads to a MongoDB database through Mongoose ODM</p>
+                <p>another site created a multi-user chatroom using websocket, and an intuitive whiteboard feature with full profile creation and customization</p>
+                <p>the last site is actually this one, meant to showcase my skills in front-end design and act as a hub for all of my current work</p>
+                <p><strong class="text-success">tools used:</strong> Express, Node.js, MongoDB, Tailwind CSS, React, Flask, PostgreSQL, Astro</p>
                 <div class="card-actions underline text-primary">
-                    <a
-                        href="https://github.com/ryanshz/ryanshz.github.io"
-                        target="_blank"
-                        rel="noopener noreferrer">more info</a
-                    >
+                    <a href="https://github.com/stars/ryanshz/lists/applications" target="_blank" rel="noopener noreferrer">current apps</a>
                 </div>
             </div>
+        </div>
+        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-none">
                 <img
                     class="opacity-90 shadow-xl max-h-96"
-                    src="/portfolio.png"
-                    alt="image of my portfolio site"
+                    src="/clustering_graph.webp"
+                    alt="heatmap of global terrorism data"
                 />
             </figure>
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">data mining</h2>
+                <p>projects meant to develop my data science skillset, involving data gathering, cleaning, and visualization</p>
+                <p>includes multiple projects on a variety of datasets, as well as a final group project</p>
+                <p><strong class="text-success">tools used:</strong> Jupyter Notebook, Pandas, NumPy, Scikit-Learn, Seaborn, Matplotlib, SciPy</p>
+                <div class="card-actions underline text-primary">
+                    <a href="https://github.com/stars/ryanshz/lists/datamining" target="_blank" rel="noopener noreferrer">datamining projects</a>
+                </div>
+            </div>
+        </div>
+        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+            <figure class="p-7 flex-none">
+                <img
+                    class="opacity-90 shadow-xl max-h-96"
+                    src="/gridgladiators.webp"
+                    alt="grid gladiators title screen"
+                />
+            </figure>
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">game devlopment</h2>
+                <p>game dev side projects, where i focused on UI/UX, menu screens, and music</p>
+                <p><strong class="text-success">tools used:</strong> GameMaker, FL Studio, Krita, GIMP</p>
+                <div class="card-actions underline text-primary">
+                    <a href="https://ryanshz.itch.io/" target="_blank" rel="noopener noreferrer">my itch.io page</a>
+                </div>
+            </div>
+        </div>
+        <div class="card lg:card-side bg-base-100 shadow-xl rounded-none flex-initial">
+            <div class="space-y-3 mx-5 my-10 flex-1">
+                <h2 class="font-bold text-xl">android app development</h2>
+                <p>coming soon...</p>
+                <p><strong class="text-success">tools used:</strong> Android Studio, Java</p>
+            </div>
         </div>
     </section>
     <script is:inline>
