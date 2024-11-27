@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/base.astro";
+import Image from "astro/components/Image.astro";
 
 const pageName = "projects";
 ---
@@ -17,11 +18,25 @@ const pageName = "projects";
                 <div class="w-fit bg-cover relative opacity-90">
                     <figure class="slideshowImage hidden">
                         <div class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans">1 / 2</div>
-                        <img src="/fedoradesk.webp" class="" />
+                        <Image 
+                            src="/fedoradesk.webp" 
+                            class=""
+                            width="1920"
+							height="1080"
+							alt="fedora desktop"
+                            loading="eager"
+                        />
                     </figure>
                     <figure class="slideshowImage hidden">
                         <div class="absolute top-0 bottom-2 px-3 py-2 text-white w-fit font-sans">2 / 2</div>
-                        <img src="/fedoradesk-laptop.webp" class="" />
+                        <Image 
+                            src="/fedoradesk-laptop.webp" 
+                            class=""
+                            width="1920"
+							height="1080"
+							alt="linux laptop desktop"
+                            loading="eager"
+                        />
                     </figure>
                     <button
                         class="absolute top-1/2 w-auto mt-[-22px] mx-4 px-3 py-2 text-white font-bold text-lg rounded-full font-sans hover:bg-neutral-400 hover:opacity-50 transition duration-500 ease-in-out"
@@ -50,10 +65,13 @@ const pageName = "projects";
         </article>
         <article class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-none">
-                <img
+                <Image
                     class="opacity-90 shadow-xl max-h-96"
                     src="/clustering_graph.webp"
                     alt="heatmap of global terrorism data"
+                    width={1920}
+                    height={1080}
+                    loading="eager"
                 />
             </figure>
             <div class="space-y-3 mx-5 my-10 flex-1">
@@ -68,10 +86,13 @@ const pageName = "projects";
         </article>
         <article class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-1">
-                <img
+                <Image
                     class="opacity-90 shadow-xl max-h-96"
                     src="/severusslices.webp"
                     alt="severusslices landing page"
+                    width={1920}
+                    height={1080}
+                    loading="eager"
                 />
             </figure>
             <div class="space-y-3 mx-5 my-10 flex-1">
@@ -88,15 +109,20 @@ const pageName = "projects";
         </article>
         <article class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <figure class="p-7 flex-none">
-                <img
-                    class="opacity-90 shadow-xl max-h-96"
-                    src="/gridgladiators.webp"
+                <Image
+                    class="shadow-xl max-h-96"
+                    src="/circuitracers.webp"
                     alt="grid gladiators title screen"
+                    width={1920}
+                    height={1080}
+                    loading="eager"
                 />
             </figure>
             <div class="space-y-3 mx-5 my-10 flex-1">
                 <h2 class="font-bold text-xl">game devlopment</h2>
                 <p>game dev side projects, where i focused on UI/UX, menu screens, and music</p>
+                <p>the first game our group made is Grid Gladiators, a roguelike bullet-hell inspired by Tron!</p>
+                <p>our next is Circuit Racers, a top-down racing game versus AI with time trial elements</p>
                 <p><strong class="text-success">tools used:</strong> GameMaker, FL Studio, Krita, GIMP</p>
                 <div class="card-actions underline text-primary">
                     <a href="https://ryanshz.itch.io/" target="_blank" rel="noopener noreferrer">my itch.io page</a>
@@ -106,7 +132,7 @@ const pageName = "projects";
         <article class="card xl:card-side bg-base-100 shadow-xl rounded-none flex-initial">
             <div class="space-y-3 mx-5 my-10 flex-1">
                 <h2 class="font-bold text-xl">android app development</h2>
-                <p>coming soon...</p>
+                <p>currently working on building up my skillset in Android development, will post more soon!</p>
                 <p><strong class="text-success">tools used:</strong> Android Studio, Java</p>
             </div>
         </article>
