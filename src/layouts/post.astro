@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props;
 			<Sidenav/>
 			<section class="drawer-content m-8 space-y-8">
                 <article class="card bg-base-100 shadow-xl rounded-none flex-initial">
-                    <div class="space-y-3 m-5">
+                    <div class="space-y-3 m-5 font-sans">
                         <h2 class="text-error font-bold text-xl">{frontmatter.title} -- {frontmatter.date}</h2>
                         <slot/>
                     </div>
