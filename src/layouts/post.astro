@@ -1,0 +1,45 @@
+---
+import Header from "../components/header.astro";
+import Sidenav from "../components/sidenav.astro";
+
+const { pageTitle } = Astro.props;
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<script is:inline>
+			if (localStorage.getItem("theme") === null) {
+				document.documentElement.setAttribute("data-theme", "business");
+			} else
+				document.documentElement.setAttribute(
+					"data-theme",
+					localStorage.getItem("theme"),
+				);
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" font-display="swap">
+		<link rel="icon" type="image/webp" href="/favicon.webp"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="generator" content={Astro.generator}/>
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header/>
+		<main class="drawer lg:drawer-open h-fit font-mono bg-base-300">
+			<Sidenav/>
+			<section class="drawer-content m-8 space-y-8">
+                <article class="card bg-base-100 shadow-xl rounded-none flex-initial">
+                    <div class="space-y-3 m-5">
+                        <h2 class="text-error font-bold text-xl">{frontmatter.title} -- {frontmatter.date}</h2>
+                        <slot/>
+                    </div>
+                </article>
+            </section>
+		</main>
+	</body>
+</html>
