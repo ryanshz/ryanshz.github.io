@@ -3,6 +3,7 @@ import Base from "../layouts/base.astro";
 
 const pageTitle = "blog";
 ---
+
 <Base pageTitle={pageTitle}>
     <section class="drawer-content m-8 space-y-8">
         <article class="card bg-base-100 shadow-xl rounded-none flex-initial">
@@ -13,9 +14,12 @@ const pageTitle = "blog";
         </article>
         <article class="card bg-base-100 shadow-xl rounded-none flex-initial">
             <div class="space-y-3 m-5">
-                <h2 class="animate-pulse text-error font-bold text-xl">posts</h2>
+                <h2 class="animate-pulse text-error font-bold text-xl">
+                    posts
+                </h2>
                 <ul>
                     <!-- add posts below this line (for ordering purposes) -->
+                    <li><a class="underline" href="/blog/021725">021725</a></li>
                     <li><a class="underline" href="/blog/021625">021625</a></li>
                 </ul>
             </div>
